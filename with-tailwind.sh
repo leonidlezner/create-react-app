@@ -4,14 +4,16 @@ echo "Project name:"
 
 read projectname
 
-npx create-react-app $projectname
+echo $projectname
 
-cd $projectname
+#npx create-react-app $projectname
 
-npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
+#cd $projectname
 
-npx tailwindcss init -p
+#npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
 
-touch .prettierrc.json
+#npx tailwindcss init -p
 
-mkdir .vscode
+#touch .prettierrc.json
+
+#mkdir .vscode
