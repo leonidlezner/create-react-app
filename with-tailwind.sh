@@ -4,38 +4,39 @@ printf "Project name: "
 
 read projectname
 
-npx create-react-app $projectname
 
-cd $projectname
+# npx create-react-app $projectname
 
-npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
+# cd $projectname
 
-npx tailwindcss init -p
+# npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
 
-sed -i '' 's/content: \[\]/content: \[ ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
+# npx tailwindcss init -p
 
-touch .prettierrc.json
+# sed -i '' 's/content: \[\]/content: \[ ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
 
-mkdir -p .vscode
+# touch .prettierrc.json
 
-cat >./.vscode/settings.json <<EOT
-{
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
-EOT
+# mkdir -p .vscode
 
-cat >./src/index.css <<EOT
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-EOT
+# cat >./.vscode/settings.json <<EOT
+# {
+#     "editor.formatOnSave": true,
+#     "editor.defaultFormatter": "esbenp.prettier-vscode"
+# }
+# EOT
 
-cat >./src/App.js <<EOT
-export default function App() {
-  return <div></div>;
-}
-EOT
+# cat >./src/index.css <<EOT
+# @tailwind base;
+# @tailwind components;
+# @tailwind utilities;
+# EOT
 
-rm ./src/App.css
-rm ./src/logo.svg
+# cat >./src/App.js <<EOT
+# export default function App() {
+#   return <div></div>;
+# }
+# EOT
+
+# rm ./src/App.css
+# rm ./src/logo.svg
