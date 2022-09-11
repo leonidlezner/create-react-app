@@ -1,8 +1,12 @@
 #!/bin/bash
 
-npx create-react-app $1
+echo "Project name:"
 
-cd $1
+read projectname
+
+npx create-react-app $projectname
+
+cd $projectname
 
 npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
 
