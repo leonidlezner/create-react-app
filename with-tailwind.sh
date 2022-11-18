@@ -4,7 +4,7 @@ printf "Project name: "
 
 read projectname
 
-npx create-react-app $projectname
+npx create-react-app $projectname --template typescript
 
 cd $projectname
 
@@ -31,7 +31,7 @@ cat >./src/index.css <<EOT
 @tailwind utilities;
 EOT
 
-cat >./src/App.js <<EOT
+cat >./src/App.ts <<EOT
 export default function App() {
   return <div></div>;
 }
