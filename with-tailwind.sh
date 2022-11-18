@@ -4,11 +4,13 @@ printf "Project name: "
 
 read projectname
 
-npx create-react-app $projectname --template typescript || exit 1
+mkdir $projectname || exit 1
 
 cd $projectname
 
-npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss || exit 1
+npx create-react-app . --template typescript
+
+npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
 
 npx tailwindcss init -p
 
