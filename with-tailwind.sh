@@ -33,7 +33,7 @@ cat >./src/index.css <<EOT
 @tailwind utilities;
 EOT
 
-cat >./src/App.ts <<EOT
+cat >./src/App.tsx <<EOT
 export default function App() {
   return <div></div>;
 }
