@@ -14,7 +14,7 @@ npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwin
 
 npx tailwindcss init -p
 
-sed -i 's/content: \[\]/content: \[ ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
+sed -i.bak 's/content: \[\]/content: \[ ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
 
 touch .prettierrc.json
 
