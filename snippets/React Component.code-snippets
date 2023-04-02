@@ -1,0 +1,13 @@
+{
+  "React Component": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "rfc",
+    "body": [
+      "interface I$1Props {}",
+      "",
+      "export default function $1({}: I$1Props) {",
+      "  return <div>$2</div>;",
+      "}"
+    ]
+  }
+}
