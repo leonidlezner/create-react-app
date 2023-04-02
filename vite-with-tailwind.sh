@@ -25,10 +25,12 @@ mkdir -p .vscode
 cat >./.vscode/settings.json <<EOT
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
 }
 EOT
+
+curl https://raw.githubusercontent.com/leonidlezner/create-react-app/main/snippets/React%20Component.code-snippets > ./.vscode/
 
 cat >./src/index.css <<EOT
 @tailwind base;
