@@ -26,6 +26,7 @@ cat >./.vscode/settings.json <<EOT
 {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.tabSize": 2
 }
 EOT
 
