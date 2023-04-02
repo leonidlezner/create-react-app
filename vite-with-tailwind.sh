@@ -30,7 +30,7 @@ cat >./.vscode/settings.json <<EOT
 }
 EOT
 
-curl https://raw.githubusercontent.com/leonidlezner/create-react-app/main/snippets/React%20Component.code-snippets > ./.vscode/
+curl https://raw.githubusercontent.com/leonidlezner/create-react-app/main/snippets/React%20Component.code-snippets > ./.vscode/React%20Component.code-snippets
 
 cat >./src/index.css <<EOT
 @tailwind base;
