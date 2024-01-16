@@ -18,7 +18,7 @@ sed -i.bak 's/content: \[\]/content: \[ ".\/index.html", ".\/src\/**\/*.{js,ts,j
 
 rm tailwind.config.js.bak
 
-touch .prettierrc.json
+echo "{}" > .prettierrc.json
 
 mkdir -p .vscode
 
