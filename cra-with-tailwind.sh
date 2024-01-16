@@ -16,7 +16,7 @@ npx tailwindcss init -p
 
 sed -i.bak 's/content: \[\]/content: \[ ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
 
-touch .prettierrc.json
+echo "{}" > .prettierrc.json
 
 mkdir -p .vscode
 
