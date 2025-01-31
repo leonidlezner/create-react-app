@@ -10,13 +10,7 @@ cd $projectname
 
 npm create vite@latest . -- --template react-ts
 
-npm install -D tailwindcss postcss autoprefixer prettier prettier-plugin-tailwindcss
-
-npx tailwindcss init -p
-
-sed -i.bak 's/content: \[\]/content: \[ ".\/index.html", ".\/src\/**\/*.{js,ts,jsx,tsx}" \]/g' tailwind.config.js
-
-rm tailwind.config.js.bak
+npm install -D tailwindcss @tailwindcss/vite postcss autoprefixer prettier prettier-plugin-tailwindcss
 
 echo "{}" > .prettierrc.json
 
@@ -33,15 +27,24 @@ EOT
 curl -s https://raw.githubusercontent.com/leonidlezner/create-react-app/main/snippets/ReactFunctionalComponent.code-snippets > ./.vscode/ReactFunctionalComponent.code-snippets
 
 cat >./src/index.css <<EOT
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 EOT
 
 cat >./src/App.tsx <<EOT
 export default function App() {
   return <div className="bg-green-100">Hello, World!</div>;
 }
+EOT
+
+cat > ./vite.config.ts <<EOT
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
 EOT
 
 rm ./src/App.css
